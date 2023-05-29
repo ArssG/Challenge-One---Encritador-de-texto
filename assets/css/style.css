@@ -1,0 +1,178 @@
+:root{
+    --bg-color: #E9ECF8;
+    --secondary-text-color: #356ea9;
+    --text-color: #052051;
+    --main-color: #AAB2D5;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    margin: 0;
+	padding: 0;
+}
+*,* :before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.encriptador{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.encriptador .logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    
+}
+.container{
+    display: flex;
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+
+}
+.container .container_text{
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 2rem 6rem ;
+    min-width: 75%;
+    color: var(--text-color);
+    align-items: start;
+    justify-content: left;
+}
+.container .container_text #text{
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+    border-style: none;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    resize: none;
+}
+.container .container_text #text:focus{
+    outline: none;
+}
+
+.down_panel{
+    margin: 2rem 0 0 0;
+    padding: 2rem 0 2rem 2rem;
+    width: 100%;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    gap: 1rem;
+}
+
+.encriptar{
+    padding: 1rem 6rem;
+    background-color: var(--text-color);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.desencriptar{
+    padding: 1rem 6rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.container .container_result{
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinear el primer elemento (p) en la parte superior */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    min-width: 25%;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.hide{
+    display: none;
+}
+
+#copy{
+    margin-top: auto; /* Colocar el botón a en la parte inferior */
+}
+
+@media (max-width: 1290px) {
+
+    .container .container_result{
+        min-width: 35%;
+    }
+    .container .container_text{
+        display: flex;
+        flex-direction: column;
+        padding: 6rem 2rem 2rem 6rem;
+        min-width: 65%;
+    }
+    
+
+}
+
+@media (max-width: 975px) {
+
+    .container{
+        flex-direction: column;
+    }
+    .container .container_text{
+        height: 70rem;
+        padding: 6rem 2rem 2rem 2rem;
+    }
+    .container_result img{
+        display: none;
+    }
+
+}
+
+@media (max-width: 590px) {
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .encriptar{
+        padding: 1.3rem 7.6rem;
+        background-color: var(--text-color);
+        color: #fff;
+        border-radius: 20px;
+        font-size: 2rem;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .desencriptar{
+        padding: 1.3rem 6rem;
+        background-color: var(--main-color);
+        color: var(--text-color);
+        border-radius: 20px;
+        font-size: 2rem;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+    }
+
+}
